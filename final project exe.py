@@ -81,24 +81,29 @@ ZOMBIE_PICNIC_USER_INPUT = [
 
 
 def choose_text():
-    print("Which story would you like to choose?\n1. Zombie Picnic.\n2. Is There a Monster in My Room?\n3. My Best"
-          "Friend Is a Ghost!")
-    selection = int(input("Please choose the number of the story: "))
-    if selection == 1:
-        text = ZOMBIE_PICNIC
-        user_input = ZOMBIE_PICNIC_USER_INPUT
-    elif selection == 2:
-        text = MONSTER
-        user_input = MONSTER_USER_INPUT
-    elif selection == 3:
-        text = GHOST
-        user_input = GHOST_USER_INPUT
-    else:
-        text = TEST_TEXT
-        user_input = TEST_INPUT
-    """else:
-            selection = int(input("I am sorry, the selection is incorrect. Please choose the number of the story: "))"""
-    return text, user_input
+  while(True):
+    try:
+      print("Which story would you like to choose?\n1. Zombie Picnic.\n2. Is There a Monster in My Room?\n3. My Best"
+            "Friend Is a Ghost!")
+      selection = int(input("Please choose the number of the story: "))
+      if selection == 1:
+          text = ZOMBIE_PICNIC
+          user_input = ZOMBIE_PICNIC_USER_INPUT
+          break
+      elif selection == 2:
+          text = MONSTER
+          user_input = MONSTER_USER_INPUT
+          break
+      elif selection == 3:
+          text = GHOST
+          user_input = GHOST_USER_INPUT
+          break
+      elif selection == 0:
+          print("Thanks for playing!")
+          _exit(0)
+    except:
+          print("\nPlease choose a valid selection or enter 0 to exit\n")
+  return text, user_input
 
 
 def say_it(text):
