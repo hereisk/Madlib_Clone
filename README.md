@@ -2,6 +2,8 @@
 
 This is my final project for Code in Place, a Madlib clone.
 
+Language used for this project is Python.
+
 You are welcome to choose from three texts to play the game. Fill out the missing words and
 enjoy the result. The final text will be printed and read out to you!
 
